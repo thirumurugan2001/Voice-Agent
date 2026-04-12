@@ -20,5 +20,9 @@ async def rag(item: voiceAgent):
             "error": str(e),
             "statusCode": 500
         }
+
+@app.get("/")
+def home():
+    return {"message": "OK"}
     
 # python -m uvicorn main:app --reload
